@@ -1,6 +1,6 @@
 "use strict";
 
-const Deck = require("./Deck.js").Deck;
+const { Deck } = require("./Deck.js");
 
 class CommanderDeck extends Deck {
   constructor(commander) {
@@ -13,4 +13,4 @@ class CommanderDeck extends Deck {
   }
 }
 
-module.exports = { CommanderDeck }
+module.exports = { CommanderDeck };

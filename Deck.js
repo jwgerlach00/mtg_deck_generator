@@ -14,4 +14,4 @@ class Deck {
   }
 }
 
-module.exports = { Deck }
+module.exports = { Deck };

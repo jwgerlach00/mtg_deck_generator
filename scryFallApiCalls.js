@@ -1,8 +1,8 @@
 "use strict";
 
 const axios = require("axios");
-const Deck = require("./Deck.js").Deck;
-const Card = require("./Card.js").Card;
+const { Deck } = require("./Deck.js");
+const { Card } = require("./Card.js");
 
 function getRandomCommander(color, exactColorMatch) {
   // https://scryfall.com/random?q=f%3Acommander+ci%3Abrg+-t%3Abasic PARTNER
@@ -35,4 +35,4 @@ async function buildRandomDeck(color, format, size) {
 module.exports = {
   getRandomCommander,
   buildRandomDeck
-}
+};
