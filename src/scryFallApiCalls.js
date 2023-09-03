@@ -17,7 +17,7 @@ async function getRandomCard(color, format) {
   do {
     query = `https://api.scryfall.com/cards/random?q=c%3${"C"}${color}`;
     res = await axios.get(query);
-  } while (res.data.legalities[format] !== "legal" && res.data.prices.usd === null);
+  } while (res.data.legalities[format] !== "legal" && res.data.prices.usd === null && res.data.image_uris === undefined);
 
   return new Card(res.data);
 }
